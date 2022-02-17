@@ -11,5 +11,5 @@ in interstices
 ```
 
 
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/00.png?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/01.png?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/02.png?raw=true" width="200">
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/03.png?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/04.png?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/05.png?raw=true" width="200">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/00.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/01.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/02.jpg?raw=true" width="200">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/03.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/04.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/05.jpg?raw=true" width="200">
