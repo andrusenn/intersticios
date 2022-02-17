@@ -27,7 +27,7 @@ body {
 	max-height: 100%;
 }
 .loading {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -37,13 +37,18 @@ body {
 	width: 100%;
 	height: 100%;
 	background: #111;
-	color: #fff;
+	color: #666;
 }
 #per {
 	font-size: 6vw;
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	transform: scale(0, 1);
 }
 @media (min-width: 1024px) {
 	#per {
-		font-size: 2vw;
+		font-size: 1.6vw;
 	}
 }

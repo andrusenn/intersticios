@@ -1,10 +1,12 @@
 /*
 Intersticios fragmentados
 
+Project: https://github.com/andrusenn/intersticios
 Andrés Senn - 2022 - https://www.fxhash.xyz/u/andrusenn
 */
 const loading = document.getElementById("loading");
 const per = document.getElementById("per");
+
 var rotations;
 var rotate_harmo;
 var harmo;
@@ -15,7 +17,6 @@ function setup() {
 	cv.parent("cv");
 	cv.id("__IntersticiosFragmentados");
 	cv.class("__IntersticiosFragmentados");
-	console.log(displayDensity());
 	pixelDensity(1);
 	// fxhash features
 	seed = fxrand() * 100000000000;
@@ -32,7 +33,7 @@ function setup() {
 	harmo.vel_phi = radians(map(fxrand(), 0, 1, 0.001, 0.002));
 	harmo.vel_alpha = radians(map(fxrand(), 0, 1, 0.1, 0.2));
 	harmo.friction = map(fxrand(), 0, 1, 0.999998, 0.999996);
-	harmo.minfricc = random(0.2, 0.5);
+	harmo.minfricc = random(0.4, 0.5);
 	harmo.noise_size2x = random(0.001, 0.002);
 	harmo.noise_size2y = random(0.001, 0.002);
 	harmo.icx = width / 2;
@@ -46,8 +47,8 @@ function setup() {
 	ghost.background(0);
 	ghost.noStroke();
 	ghost.fill(255);
-	for (let i = 0; i < 3; i++) {
-		ghost.circle(random(width), random(height), random(400, 800));
+	for (let i = 0; i < 4; i++) {
+		ghost.circle(random(width), random(height), random(400, 1200));
 	}
 	for (let i = 0; i < 3; i++) {
 		ghost.rect(
@@ -104,7 +105,7 @@ function setup() {
 	pop();
 
 	// Gradiant circles ----------------------
-	for (let i = 0; i < 2; i++) {
+	for (let i = 0; i < 3; i++) {
 		let x = random(width);
 		let y = random(height);
 		let r = random(200, 1200);
@@ -164,14 +165,14 @@ function draw() {
 	pop();
 
 	// Generating
-	per.innerHTML = int((frameCount / 30) * 100) + "%";
-
+	per.style.transform = `scale(${frameCount / 30},1)`;
 	// Finish
-	if (frameCount >= 30) {
+	if (frameCount >= 40) {
+		loading.style.display = "none";
 		// Displace
 		for (let i = 0; i < 3; i++) {
 			push();
-			let gh = random(10, 200);
+			let gh = random(3*(i+1), 50*(i+1));
 			translate(width / 2, height / 2);
 			rotate((TAU / 8) * int(random(0, 9)));
 			translate(-width / 2, -height / 2);
@@ -199,7 +200,6 @@ function draw() {
 			fxpreview();
 		}
 		noLoop();
-		loading.style.display = "none";
 	}
 }
 
