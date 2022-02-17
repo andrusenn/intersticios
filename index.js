@@ -1,5 +1,18 @@
 /*
-Intersticios fragmentados
+En intersticios.
+
+No hay lugar más común.
+Es solo la inconsciencia.
+
+¿Qué esconden las sombras?
+
+Nada, vacío
+
+O solo viejos fantasmas.
+
+No hay lugar más común.
+
+
 
 Project: https://github.com/andrusenn/intersticios
 Andrés Senn - 2022 - https://www.fxhash.xyz/u/andrusenn
@@ -15,13 +28,13 @@ var fixcolor;
 function setup() {
 	const cv = createCanvas(2160, 2160);
 	cv.parent("cv");
-	cv.id("__IntersticiosFragmentados");
-	cv.class("__IntersticiosFragmentados");
+	cv.id("__Intersticios");
+	cv.class("__Intersticios");
 	pixelDensity(1);
 	// fxhash features
 	seed = fxrand() * 100000000000;
 	window.$fxhashFeatures = {
-		seed: seed,
+		Intersticio: seed,
 	};
 
 	randomSeed(seed);
@@ -69,15 +82,15 @@ function setup() {
 
 	// Background ---------------------------
 	noStroke();
-	let gradient = drawingContext.createLinearGradient(
+	let bgGradient = drawingContext.createLinearGradient(
 		-width / 2,
 		-height / 2,
 		width / 2,
 		height / 2,
 	);
-	gradient.addColorStop(0, color(random(255, 167)));
-	gradient.addColorStop(1, color(random(0, 40)));
-	drawingContext.fillStyle = gradient;
+	bgGradient.addColorStop(0, color(random(255, 167)));
+	bgGradient.addColorStop(1, color(random(0, 40)));
+	drawingContext.fillStyle = bgGradient;
 	push();
 	translate(width / 2, height / 2);
 	rotate(rotations[int(random(0, 4))]);
@@ -86,30 +99,30 @@ function setup() {
 	pop();
 
 	// Rect ---------------------------------
-	push();
-	translate(width / 2, height / 2);
-	rotate(rotations[int(random(0, 4))]);
-	translate(-width / 2, -height / 2);
-	let brw = random(50, 150);
-	let brp = random(width) - brw;
-	let gradientRect = drawingContext.createLinearGradient(
-		brp,
-		0,
-		brw,
-		height / 2,
-	);
-	gradient.addColorStop(0, "#000");
-	gradient.addColorStop(1, "#333");
-	drawingContext.fillStyle = gradientRect;
-	rect(brp, 0, brw, height);
-	pop();
+	if (random(1) > 0.4) {
+		push();
+		translate(width / 2, height / 2);
+		rotate(rotations[int(random(0, 4))]);
+		translate(-width / 2, -height / 2);
+		let rectGradient = drawingContext.createLinearGradient(
+			0,
+			0,
+			width / 2,
+			height,
+		);
+		rectGradient.addColorStop(0, color(random(200, 255)));
+		rectGradient.addColorStop(1, color(40, 150));
+		drawingContext.fillStyle = rectGradient;
+		rect(0, 0, width / 2, height);
+		pop();
+	}
 
 	// Gradiant circles ----------------------
 	for (let i = 0; i < 3; i++) {
 		let x = random(width);
 		let y = random(height);
 		let r = random(200, 1200);
-		let gradient2 = drawingContext.createRadialGradient(
+		let circleGrad = drawingContext.createRadialGradient(
 			x,
 			y - r / 2,
 			0,
@@ -117,9 +130,9 @@ function setup() {
 			y,
 			r,
 		);
-		gradient2.addColorStop(0, color(0, 200));
-		gradient2.addColorStop(1, color(255, 200));
-		drawingContext.fillStyle = gradient2;
+		circleGrad.addColorStop(0, color(0, 200));
+		circleGrad.addColorStop(1, color(255, 200));
+		drawingContext.fillStyle = circleGrad;
 		push();
 		translate(width / 2, height / 2);
 		rotate(random(TAU));
@@ -131,9 +144,9 @@ function setup() {
 	// Initial Rotation
 	rotate_harmo = rotations[int(random(0, 4))];
 
-	document.title = `Intarsticios fragmentados | Andr\u00e9s Senn | 2022`;
+	document.title = `Intarsticios | Andr\u00e9s Senn | 2022`;
 	console.log(
-		`%c Intarsticios fragmentados | Andr\u00e9s Senn | fxhash 01/2022 | Projet code: https://github.com/andrusenn/intersticios`,
+		`%c Intarsticios | Andr\u00e9s Senn | fxhash 01/2022 | Projet code: https://github.com/andrusenn/intersticios`,
 		"background:#eee;border-radius:10px;background-size:15%;font-color:#222;padding:10px;font-size:15px;text-align:center;",
 	);
 }
@@ -142,46 +155,58 @@ function draw() {
 	translate(width / 2, height / 2);
 	rotate(rotate_harmo);
 	translate(-width / 2, -height / 2);
-	for (let j = 0; j < 100; j++) {
-		for (let i = 0; i < 100; i++) {
-			harmo.update();
-			push();
-			let col = map(
-				brightness(ghost.get(int(harmo.x), int(harmo.y))),
-				0,
-				100,
-				255,
-				0,
-			);
-			stroke(col,200);
-			strokeWeight(1.6);
-			if (i % int(random(60,80)) == 0) {
-				strokeWeight(7);
-			}
-			point(harmo.x, harmo.y);
-			pop();
+	for (let i = 0; i < 2500; i++) {
+		harmo.update();
+		push();
+		let col = map(
+			brightness(ghost.get(int(harmo.x), int(harmo.y))),
+			0,
+			100,
+			255,
+			0,
+		);
+		stroke(col, 200);
+		strokeWeight(1.6);
+		if (i % int(random(60, 80)) == 0) {
+			strokeWeight(7);
 		}
+		point(harmo.x, harmo.y);
+		pop();
 	}
 	pop();
 
-	// Generating
-	per.style.transform = `scale(${frameCount / 30},1)`;
 	// Finish
-	if (frameCount >= 40) {
-		loading.style.display = "none";
-		// Displace
+	if (frameCount >= 180) {
+		// Displace --------------------------
+		// Mirar solo los intersticios -------
 		for (let i = 0; i < 3; i++) {
 			push();
-			let gh = random(3*(i+1), 50*(i+1));
+			let gh = random(3 * (i + 1), 50 * (i + 1));
 			translate(width / 2, height / 2);
 			rotate((TAU / 8) * int(random(0, 9)));
 			translate(-width / 2, -height / 2);
 			let img = get(0, random(height - gh), width, gh);
 			let iyp = random(height - gh);
-			image(img, 0, iyp);
+			let shadow = drawingContext.createLinearGradient(
+				0,
+				-img.height * 0.5,
+				0,
+				img.height * 2,
+			);
+			shadow.addColorStop(0, color(0, 0));
+			shadow.addColorStop(0.6, color(0, 0));
+			shadow.addColorStop(0.5, color(0));
+			shadow.addColorStop(0.7, color(0, 0));
+			shadow.addColorStop(1, color(0, 0));
+			drawingContext.fillStyle = shadow;
+
+			translate(0, iyp);
+			rect(0, -img.height * 0.5, img.width, img.height * 2);
+			image(img, 0, 0);
 			pop();
 		}
 		// Color line ------------------------
+		// ??
 		push();
 		translate(width / 2, height / 2);
 		rotate((TAU / 4) * int(random(0, 5)));
@@ -233,7 +258,7 @@ function keyReleased() {
 			}`,
 			"background: #000; color: #ccc;padding:5px;font-size:15px",
 		);
-		saveCanvas("_" + date);
+		saveCanvas("Intersticio_" + date);
 	}
 }
 class Harmonograph {
