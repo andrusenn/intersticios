@@ -20,6 +20,8 @@ As always, using pure shapes like rectangles and circles in contrast to organic 
 
 Draw 3 circles in random position and random diameter on top of greyscale gradient background.
 
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/s0.jpg?raw=true" width="400"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/s1.jpg?raw=true" width="400">
+
 <br>
 
 ### **Negative space (the ghost image)**
@@ -33,8 +35,7 @@ Used to alternately draw black and white.
 
 ### **Class harmonograph**
 
-
-Draw negative spaces to uncover ghost images.
+Draw dots and rects in negative spaces (black or white) to uncover ghost images.
 
 <img src="https://github.com/andrusenn/intersticios/blob/master/images/h1.jpg?raw=true" width="400"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/h2.jpg?raw=true" width="400">
 
@@ -57,5 +58,5 @@ Cut random portions of the image and paste them randomly.
 
 ### **Results**
 
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/00.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/01.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/02.jpg?raw=true" width="200">
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/03.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/04.jpg?raw=true" width="200"><img src="https://github.com/andrusenn/intersticios/blob/master/images/05.jpg?raw=true" width="200">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/00.jpg?raw=true" width="200"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/01.jpg?raw=true" width="200"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/02.jpg?raw=true" width="200">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/03.jpg?raw=true" width="200"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/04.jpg?raw=true" width="200"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/05.jpg?raw=true" width="200">
