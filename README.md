@@ -4,10 +4,9 @@
 
 ***"Sometimes pure shapes are imperfect, except for their interstices"***
 
+---
 
 As always, using pure shapes like rectangles and circles in contrast to organic shapes.
-
----
 
 <br>
 <br>
@@ -17,12 +16,18 @@ As always, using pure shapes like rectangles and circles in contrast to organic 
 <br>
 <br>
 
+### **Draw pure circles**
+
+Draw 3 circles in random position and random diameter on top of greyscale gradient background.
+
+<br>
+
 ### **Negative space (the ghost image)**
 
 
 Used to alternately draw black and white.
 
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/n0.jpg?raw=true" width="400"><img src="https://github.com/andrusenn/intersticios/blob/master/images/n1.jpg?raw=true" width="400">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/n0.jpg?raw=true" width="400"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/n1.jpg?raw=true" width="400">
 
 <br>
 
@@ -31,13 +36,13 @@ Used to alternately draw black and white.
 
 Draw negative spaces to uncover ghost images.
 
-<img src="https://github.com/andrusenn/intersticios/blob/master/images/h1.jpg?raw=true" width="400"><img src="https://github.com/andrusenn/intersticios/blob/master/images/h2.jpg?raw=true" width="400">
+<img src="https://github.com/andrusenn/intersticios/blob/master/images/h1.jpg?raw=true" width="400"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/h2.jpg?raw=true" width="400">
 
 <br>
 
 ### **Minimal colors detail**
 
-HSB
+3 colors in HSB space
 - 240, 200, 250
 - 130, 200, 250
 - 40, 200, 250

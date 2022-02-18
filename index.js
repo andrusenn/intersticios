@@ -6,16 +6,14 @@ en intersticios
 
 Project: https://github.com/andrusenn/intersticios
 Andrés Senn - 2022 - https://www.fxhash.xyz/u/andrusenn
+
 */
-const loading = document.getElementById("loading");
-const per = document.getElementById("per");
 
 var rotations;
 var rotate_harmo;
 var harmo;
 var ghost;
 var fixcolor;
-var color_code;
 var idx = 0;
 function setup() {
 	const cv = createCanvas(2160, 2160);
@@ -65,11 +63,7 @@ function setup() {
 		color(130, 200, 250),
 		color(40, 200, 250),
 	];
-	color_code = [
-		"240, 200, 250",
-		"130, 200, 250",
-		"40, 200, 250",
-	];
+
 	idx = int(random(3));
 
 	// Background ---------------------------
@@ -90,7 +84,7 @@ function setup() {
 	rect(0, 0, width, height);
 	pop();
 
-	// Rect ---------------------------------
+	// Background Rect ---------------------------------
 	if (random(1) > 0.4) {
 		push();
 		translate(width / 2, height / 2);
@@ -125,6 +119,8 @@ function setup() {
 		circleGrad.addColorStop(0, color(0, 200));
 		circleGrad.addColorStop(1, color(255, 200));
 		drawingContext.fillStyle = circleGrad;
+
+		// Draw
 		push();
 		translate(width / 2, height / 2);
 		rotate(random(TAU));
@@ -133,20 +129,18 @@ function setup() {
 		pop();
 	}
 
-	// Initial Rotation
+	// Initial Rotation ----------------------
 	rotate_harmo = rotations[int(random(0, 4))];
 
-	// fxhash features
+	// fxhash features -----------------------
 	window.$fxhashFeatures = {
-		"Intersticio": seed,
-		"Color code": color_code[idx]
+		Intersticio: seed,
 	};
-
 
 	document.title = `en intersticios | Andr\u00e9s Senn | 2022`;
 	console.log(
-		`%c en intersticios | Andr\u00e9s Senn | fxhash 01/2022 | Projet code: https://github.com/andrusenn/intersticios`,
-		"background:#eee;border-radius:10px;background-size:15%;font-color:#222;padding:10px;font-size:15px;text-align:center;",
+		`%c en intersticios | Andr\u00e9s Senn | fxhash 02/2022 | Projet: https://github.com/andrusenn/intersticios`,
+		"background:#333;border-radius:10px;background-size:15%;color:#eee;padding:10px;font-size:15px;text-align:center;",
 	);
 }
 function draw() {
@@ -236,28 +230,31 @@ function keyReleased() {
 		}
 	}
 	if (key == "s" || key == "S") {
-		let date =
-			year() +
-			"" +
-			month() +
-			"" +
-			day() +
-			"" +
-			hour() +
-			"" +
-			minute() +
-			"" +
-			second() +
-			"" +
-			".png";
-		console.log(
-			`%c SAVING ${
-				String.fromCodePoint(0x1f5a4) + String.fromCodePoint(0x1f90d)
-			}`,
-			"background: #000; color: #ccc;padding:5px;font-size:15px",
-		);
-		saveCanvas("Intersticio_" + date);
+		grabImage();
 	}
+}
+function grabImage() {
+	let date =
+		year() +
+		"" +
+		month() +
+		"" +
+		day() +
+		"" +
+		hour() +
+		"" +
+		minute() +
+		"" +
+		second() +
+		"" +
+		".png";
+	console.log(
+		`%c SAVING ${
+			String.fromCodePoint(0x1f5a4) + String.fromCodePoint(0x1f90d)
+		}`,
+		"background: #000; color: #ccc;padding:5px;font-size:15px",
+	);
+	saveCanvas("intersticio_" + date);
 }
 class Harmonograph {
 	constructor() {
