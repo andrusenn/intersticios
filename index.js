@@ -1,18 +1,8 @@
 /*
-En intersticios.
 
-No hay lugar más común.
-Es solo la inconsciencia.
+en intersticios
 
-¿Qué esconden las sombras?
-
-Nada, vacío
-
-O solo viejos fantasmas.
-
-No hay lugar más común.
-
-
+"A veces las formas puras son imperfectas, salvo sus intersticios"
 
 Project: https://github.com/andrusenn/intersticios
 Andrés Senn - 2022 - https://www.fxhash.xyz/u/andrusenn
@@ -25,18 +15,15 @@ var rotate_harmo;
 var harmo;
 var ghost;
 var fixcolor;
+var color_code;
+var idx = 0;
 function setup() {
 	const cv = createCanvas(2160, 2160);
 	cv.parent("cv");
-	cv.id("__Intersticios");
-	cv.class("__Intersticios");
+	cv.id("__intersticios");
+	cv.class("__intersticios");
 	pixelDensity(1);
-	// fxhash features
 	seed = fxrand() * 100000000000;
-	window.$fxhashFeatures = {
-		Intersticio: seed,
-	};
-
 	randomSeed(seed);
 	noiseSeed(seed);
 
@@ -56,7 +43,6 @@ function setup() {
 
 	// Ghost -----------------------------
 	ghost = createGraphics(width, height);
-	ghost.id("ghost");
 	ghost.background(0);
 	ghost.noStroke();
 	ghost.fill(255);
@@ -79,6 +65,12 @@ function setup() {
 		color(130, 200, 250),
 		color(40, 200, 250),
 	];
+	color_code = [
+		"240, 200, 250",
+		"130, 200, 250",
+		"40, 200, 250",
+	];
+	idx = int(random(3));
 
 	// Background ---------------------------
 	noStroke();
@@ -144,9 +136,16 @@ function setup() {
 	// Initial Rotation
 	rotate_harmo = rotations[int(random(0, 4))];
 
-	document.title = `Intarsticios | Andr\u00e9s Senn | 2022`;
+	// fxhash features
+	window.$fxhashFeatures = {
+		"Intersticio": seed,
+		"Color code": color_code[idx]
+	};
+
+
+	document.title = `en intersticios | Andr\u00e9s Senn | 2022`;
 	console.log(
-		`%c Intarsticios | Andr\u00e9s Senn | fxhash 01/2022 | Projet code: https://github.com/andrusenn/intersticios`,
+		`%c en intersticios | Andr\u00e9s Senn | fxhash 01/2022 | Projet code: https://github.com/andrusenn/intersticios`,
 		"background:#eee;border-radius:10px;background-size:15%;font-color:#222;padding:10px;font-size:15px;text-align:center;",
 	);
 }
@@ -212,7 +211,6 @@ function draw() {
 		rotate((TAU / 4) * int(random(0, 5)));
 		translate(-width / 2, -height / 2);
 		let rGrad = drawingContext.createLinearGradient(0, 0, width, 0);
-		let idx = int(random(3));
 		rGrad.addColorStop(0.2, color(0, 0));
 		rGrad.addColorStop(0.5, fixcolor[idx]);
 		rGrad.addColorStop(0.8, color(0, 0));
