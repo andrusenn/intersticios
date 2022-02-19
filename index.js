@@ -134,12 +134,12 @@ function setup() {
 
 	// fxhash features -----------------------
 	window.$fxhashFeatures = {
-		Intersticio: seed,
+		"Intersticio": seed,
 	};
 
 	document.title = `en intersticios | Andr\u00e9s Senn | 2022`;
 	console.log(
-		`%c en intersticios | Andr\u00e9s Senn | fxhash 02/2022 | Projet: https://github.com/andrusenn/intersticios`,
+		`%c en intersticios | Andr\u00e9s Senn | fxhash 19/02/2022 | Projet: https://github.com/andrusenn/intersticios`,
 		"background:#333;border-radius:10px;background-size:15%;color:#eee;padding:10px;font-size:15px;text-align:center;",
 	);
 }

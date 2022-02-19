@@ -6,7 +6,7 @@
 
 ---
 
-As always, using pure shapes like rectangles and circles in contrast to organic shapes.
+As always, using pure shapes like rectangles and circles in contrast to organic shapes. Sometimes trying to fight against the hegemony of perfect geometry in generative art.
 
 <br>
 <br>
