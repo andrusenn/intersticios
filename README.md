@@ -18,7 +18,7 @@ As always, using pure shapes like rectangles and circles in contrast to organic 
 
 ### **Draw pure circles**
 
-Draw 3 circles in random position and random diameter on top of greyscale gradient background.
+Draw 3 circles in random position (eclipses could happen) and random diameter on top of greyscale gradient background.
 
 <img src="https://github.com/andrusenn/intersticios/blob/master/images/s0.jpg?raw=true" width="400"> <img src="https://github.com/andrusenn/intersticios/blob/master/images/s1.jpg?raw=true" width="400">
 

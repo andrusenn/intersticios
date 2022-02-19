@@ -134,7 +134,7 @@ function setup() {
 
 	// fxhash features -----------------------
 	window.$fxhashFeatures = {
-		"Intersticio": seed,
+		"Intersticio": fxrand(),
 	};
 
 	document.title = `en intersticios | Andr\u00e9s Senn | 2022`;
